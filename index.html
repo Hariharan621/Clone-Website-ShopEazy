@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEasy - Your Convenient Shopping Destination</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="site-name">ShopEasy</h1>
+      <h2>Your Convenient Shopping Destination</h2>
+    </header>
+
+    <nav>
+      
+        <ul>
+          <li><a href="#home" onclick="showTab('home')">Home</a></li>
+          <li><a href="#products" onclick="showTab('products')">Products</a></li>
+          <li><a href="#contact" onclick="showTab('contact')">Contact</a></li>
+        </ul>
+      
+    </nav>
+
+    <main>
+      <section id="products">
+        <h2>Featured Products</h2>
+        <div class="product">
+          <img
+            src="https://images.unsplash.com/photo-1637160151663-a410315e4e75?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+            alt="Smart Watch"
+          />
+
+          <h3>Smart Watch Prime v21</h3>
+          <p>$19.99</p>
+          <button onclick="addToCart('Smart Watch Prime v21')">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product">
+          <img
+            src="https://images.unsplash.com/photo-1606986628470-26a67fa4730c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGRpZ2l0YWwlMjBDYW1lcmF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+            alt="Digital Camera"
+          />
+          <h3>Sony Digital Camera</h3>
+          <p>$24.99</p>
+          <button onclick="addToCart('Sony Digital Camera')">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product">
+          <img
+            src="https://images.unsplash.com/photo-1603680373177-e762186bdc3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8QWlyJTIwcG9kc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+            alt="Air Pods"
+          />
+          <h3>Air Pods Noise n2000</h3>
+          <p>$14.99</p>
+          <button onclick="addToCart('Air Pods Noise n2000')">
+            Add to Cart
+          </button>
+        </div>
+
+      </div>
+      <div class="product">
+        <img
+          src="https://images.unsplash.com/photo-1505740106531-4243f3831c78?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+          alt="Head Phone"
+        />
+        <h3>Head Phone Thunder</h3>
+        <p>$79.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img
+          src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80"
+          alt="Mac 12i Pro"
+        />
+        <h3>Mac 12i Pro</h3>
+        <p>$289.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img
+          src="https://images.unsplash.com/photo-1676624763808-9daf9ccbf0c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80"
+          alt="Play Station"
+        />
+        <h3>PS 5 Pro</h3>
+        <p>$65.30</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img
+          src="https://images.unsplash.com/photo-1558089687-f282ffcbc126?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80"
+          alt="Speaker"
+        />
+        <h3>Turbo speakers</h3>
+        <p>$118.20</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img
+          src="
+          https://images.unsplash.com/photo-1542751110-97427bbecf20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1384&q=80"
+          alt="Tablet"
+        />
+        <h3>Asus Tablet G322i</h3>
+        <p>$292.99</p>
+        <button>Add to Cart</button>
+      </div>
+
+        <!-- Add more products here -->
+      </section>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="contact.php" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 My E-commerce Store. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      function addToCart(productName) {
+        // Add your logic to add the product to the cart
+        alert("Added " + productName + " to cart!");
+        <script>
+  function showTab(tabId) {
+    // Hide all tabs
+    const tabs = document.querySelectorAll("section");
+    tabs.forEach(tab => {
+      tab.style.display = "none";
+    });
+
+    // Show the selected tab
+    const selectedTab = document.getElementById(tabId);
+    selectedTab.style.display = "block";
+
+    // Perform additional functionalities for each tab
+    if (tabId === "home") {
+      // Add your logic for the "Home" tab
+    } else if (tabId === "products") {
+      // Add your logic for the "Products" tab
+    } else if (tabId === "contact") {
+      // Add your logic for the "Contact" tab
+    }
+  }
+</script>
+
+      }
+    </script>
+  </body>
+</html>
